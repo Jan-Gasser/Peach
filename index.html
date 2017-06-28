@@ -11,84 +11,109 @@
   </head>
   <body>
     <!-- Header start -->
-    <div id="header" class="container-fluid">
-      <h1 class="text-center">Spicy Banana</h1>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Spicy Now</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Fresh</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Trending</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Controversial</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header some-border">
+          <a class="navbar-brand" href="#">
+            <span><img src="resources/images/Logo_m152.png"  width="30" height="30"/></span>
+            Spicy Banana
+          </a>
         </div>
-      </nav>
-    </div>
-    <!-- Content Start -->
-    <div id="content" class="container">
-      <div class="col-sm-6 col-sm-offset-3" id="content-frame">
-        <img src="resources/images/test.PNG" class="center-block" />
-        <div class="col-sm-12">
-          <div class="col-sm-4 col-sm-offset-2">
-            <div class="col-sm-4">
-              <p>127</p>
-            </div>
-            <div class="col-sm-5">
-              <img class="img-responsive" src="resources/icons/eye.png" alt="flaticon.com"/>
-            </div>
-          </div>
-        </div>
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="nav-link" href="#">Spicy Now</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Fresh</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Trending</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Controversial</a>
+          </li>
+        </ul>
       </div>
-
-      <div class="col-sm-6 col-sm-offset-3" id="content-frame">
-        <img src="resources/images/CediMeme.jpg" class="center-block" />
-        <div class="col-sm-12">
-          <div class="col-sm-4 col-sm-offset-2">
+    </nav>
+    <!-- Content Start -->
+    <div id="content" class="container-fluid col-sm-12">
+      <div class="col-sm-4 col-sm-offset-4 border-bottom-0">
+        <div class="col-sm-12 well well-sm meme-image top-space">
+          <div onclick="openModal();currentSlide(1)">
+            <img src="resources/images/CediMeme.jpg" class="img-responsive" />
+          </div>
+          <div class="col-sm-4">
             <div class="col-sm-4">
               <p>350</p>
             </div>
-            <div class="col-sm-5">
+            <div class="col-sm-8">
               <img class="img-responsive" src="resources/icons/eye.png" alt="flaticon.com"/>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6 col-sm-offset-3" id="content-frame">
-        <img src="resources/images/CediMeme2.jpg" class="center-block" />
-        <div class="col-sm-12">
-          <div class="col-sm-4 col-sm-offset-2">
-            <div class="col-sm-4">
-              <p>12</p>
-            </div>
-            <div class="col-sm-5">
-              <img class="img-responsive" src="resources/icons/eye.png" alt="flaticon.com"/>
-            </div>
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-12 well well-sm meme-image top-space">
+          <div class="col-sm-12">
+            <img src="resources/images/Switch_Meme.jpg" class="img-responsive"/>
+          </div>
+          <div class="col-sm-4">
+            <p class="inline">12</p>
+            <img class="inline" src="resources/icons/eye.png" alt="flaticon.com"/>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="col-sm-6 col-sm-offset-3" id="content-frame">
-        <img src="resources/images/Switch_Meme.jpg" class="center-block" />
-        <div class="col-sm-12">
-          <div class="col-sm-4 col-sm-offset-2">
-            <div class="col-sm-4">
-              <p>12</p>
-            </div>
-            <div class="col-sm-5">
-              <img class="img-responsive" src="resources/icons/eye.png" alt="flaticon.com"/>
-            </div>
+    <!--Lightbox START -->
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="mySlides">
+          <div class="col-sm-offset-3">
+            <div class="numbertext">1 / 4</div>
+            <img src="resources/images/CediMeme.jpg" class="light-image">
           </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+            <img src="resources/images/CediMeme.jpg" class="light-image">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+            <img src="resources/images/Switch_Meme.jpg" class="light-image">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+            <img src="resources/images/Switch_Meme.jpg" class="light-image">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <div class="column">
+          <img class="demo" src="resources/images/Switch_Meme.jpg" onclick="currentSlide(0)" alt="Nature">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="resources/images/Switch_Meme.jpg" onclick="currentSlide(1)" alt="Trolltunga">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="resources/images/Switch_Meme.jpg" onclick="currentSlide(2)" alt="Mountains">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="resources/images/Switch_Meme.jpg" onclick="currentSlide(3)" alt="Lights">
         </div>
       </div>
     </div>
