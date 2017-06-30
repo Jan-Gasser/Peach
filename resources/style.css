@@ -11,6 +11,9 @@
   margin-left: 8px;
 }
 
+.img-responsive {
+  max-width: 90%;
+}
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -34,12 +37,17 @@
   margin-top: 5px;
 }
 
+.lightbox-main-image {
+  height: 100%;
+  width: auto;
+}
+
 .center {
   margin: 0 auto;
 }
 
 .meme-image {
-  border: 0.5px solid black;
+  border: 0.5px solid #c1c1c1;
   margin-bottom: 3px;
 }
 
@@ -47,29 +55,13 @@
   display: inline;
 }
 
-img.inline {
-    width: 30%;
-    height: auto;
+.image-clip {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 /************ Lighbox **************/
-
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left;
-  width: 22%;
-  margin-right: 10px;
-  margin-left: 10px
-}
 
 /* The Modal (background) */
 .modal {
@@ -79,8 +71,8 @@ img.inline {
   padding-top: 2%;
   left: 0;
   top: 0;
-  width: 66%;
-  height: 88%;
+  width: 75%;
+  height: 92%;
   overflow: auto;
   background-color: black;
   margin: auto;
@@ -93,7 +85,6 @@ img.inline {
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
   height: 90%;
   background-color: black;
 }
@@ -104,7 +95,7 @@ img.inline {
   position: absolute;
   top: 5px;
   right: 25px;
-  font-size: 35px;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -130,7 +121,7 @@ img.inline {
   margin-top: -50px;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5em;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -182,9 +173,4 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
-
-.light-image {
-  height:100%;
-  width:auto;
 }

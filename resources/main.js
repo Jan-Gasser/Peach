@@ -1,9 +1,12 @@
 window.onload = function() {
 }
 
+var open = false;
+
 function openModal() {
   document.body.style.overflow = "hidden";
   document.getElementById('myModal').style.display = "block";
+  open = true;
 }
 
 function closeModal() {
